@@ -1,0 +1,10 @@
+13:41:34 **** Incremental Build of configuration Debug for project XBee ****
+make -j9 all 
+arm-none-eabi-size  XBee.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35640	    484	   2204	  38328	   95b8	XBee.elf
+Finished building: default.size.stdout
+ 
+
+13:41:34 Build Finished. 0 errors, 0 warnings. (took 317ms)
+
