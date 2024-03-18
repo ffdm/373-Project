@@ -1,0 +1,31 @@
+22:08:25 **** Incremental Build of configuration Debug for project Car ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4R5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:183:19: warning: unused variable 'Ly' [-Wunused-variable]
+  183 |           uint8_t Ly = rx_data[5];
+      |                   ^~
+../Core/Src/main.c:182:19: warning: unused variable 'Lx' [-Wunused-variable]
+  182 |           uint8_t Lx = rx_data[4];
+      |                   ^~
+../Core/Src/main.c:181:19: warning: unused variable 'Ry' [-Wunused-variable]
+  181 |           uint8_t Ry = rx_data[3];
+      |                   ^~
+At top level:
+../Core/Src/main.c:217:16: warning: 'print_int' defined but not used [-Wunused-function]
+  217 |           void print_int(uint8_t x) {
+      |                ^~~~~~~~~
+arm-none-eabi-gcc -o "Car.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Dimas\OneDrive\Desktop\373 Project\Car\STM32L4R5ZITXP_FLASH.ld" --specs=nosys.specs -Wl,-Map="Car.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Car.elf
+ 
+arm-none-eabi-size  Car.elf 
+arm-none-eabi-objdump -h -S Car.elf  > "Car.list"
+   text	   data	    bss	    dec	    hex	filename
+  36364	    476	   2356	  39196	   991c	Car.elf
+Finished building: default.size.stdout
+ 
+Finished building: Car.list
+ 
+
+22:08:27 Build Finished. 0 errors, 4 warnings. (took 2s.10ms)
+
