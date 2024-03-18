@@ -328,3 +328,733 @@ java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()"
 2024-03-17 13:16:52,799 [INFO] CADModel:114 - Register for checkConnection events
 2024-03-17 13:16:52,849 [INFO] OpenFileManager:343 - Restore cursor
 2024-03-17 13:17:38,293 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,544x287,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 14:11:20,993 [INFO] Gpio:277 - dependency for GPIO [LPUART1, USART2]
+2024-03-17 14:12:00,549 [INFO] Gpio:277 - dependency for GPIO [LPUART1, USART2]
+2024-03-17 14:12:00,995 [INFO] Gpio:277 - dependency for GPIO [LPUART1, USART2]
+2024-03-17 14:44:39,833 [INFO] Gpio:277 - dependency for GPIO [LPUART1, USART2]
+2024-03-17 14:45:47,010 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 14:45:47,151 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 14:59:36,179 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 705922904 Bytes (1073741824)
+2024-03-17 14:59:36,708 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 797517384 Bytes (1073741824)
+2024-03-17 14:59:36,986 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 14:59:36,986 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 14:59:36,986 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 14:59:36,986 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 14:59:36,986 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 14:59:36,986 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 14:59:36,986 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 14:59:36,988 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 14:59:37,126 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 14:59:37,425 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 14:59:37,698 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 14:59:37,846 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 14:59:38,543 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 14:59:38,697 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 14:59:38,699 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 14:59:38,744 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 14:59:38,750 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 14:59:38,836 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 14:59:38,839 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 14:59:38,881 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 14:59:38,885 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 14:59:38,935 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 14:59:39,004 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 14:59:39,064 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 14:59:39,065 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 14:59:39,152 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 14:59:39,568 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 108mS.
+2024-03-17 14:59:39,579 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 14:59:39,826 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 14:59:39,833 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-03-17 14:59:39,837 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-03-17 14:59:39,844 [INFO] ApiDbMcu:508 - Load IP Config File for TOUCHSENSING
+2024-03-17 14:59:39,852 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2024-03-17 14:59:39,859 [INFO] ApiDbMcu:508 - Load IP Config File for USB_HOST
+2024-03-17 14:59:41,312 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1731mS.
+2024-03-17 14:59:41,315 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 14:59:41,318 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 15:19:37,695 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 15:19:41,325 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 922382944 Bytes (1073741824)
+2024-03-17 15:19:42,117 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 678628072 Bytes (1073741824)
+2024-03-17 15:19:42,319 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 15:19:42,319 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 15:19:42,319 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 15:19:42,319 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 15:19:42,319 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 15:19:42,319 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 15:19:42,320 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 15:19:42,320 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 15:19:42,451 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 15:19:42,538 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 15:19:42,813 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 15:19:42,940 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 15:19:43,599 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 15:19:43,768 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 15:19:43,770 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 15:19:43,817 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 15:19:43,822 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 15:19:43,913 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 15:19:43,916 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 15:19:43,959 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 15:19:43,964 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 15:19:44,014 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 15:19:44,038 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 15:19:44,098 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 15:19:44,100 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 15:19:44,182 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 15:19:44,640 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 116mS.
+2024-03-17 15:19:44,650 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 15:19:44,892 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 15:19:46,277 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1626mS.
+2024-03-17 15:19:46,281 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 15:19:46,283 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 15:32:48,598 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 15:32:53,386 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 900307456 Bytes (1073741824)
+2024-03-17 15:32:53,660 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 673066776 Bytes (1073741824)
+2024-03-17 15:32:53,913 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 15:32:53,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 15:32:53,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 15:32:53,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 15:32:53,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 15:32:53,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 15:32:53,914 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 15:32:53,915 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 15:32:54,252 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 15:32:54,362 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 15:32:54,460 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 15:32:54,578 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 15:32:55,062 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 15:32:55,279 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 15:32:55,290 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 15:32:55,341 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 15:32:55,350 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 15:32:55,445 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 15:32:55,447 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 15:32:55,492 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 15:32:55,496 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 15:32:55,552 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 15:32:55,579 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 15:32:55,647 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 15:32:55,649 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 15:32:55,729 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 15:32:56,225 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 117mS.
+2024-03-17 15:32:56,234 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 15:32:56,472 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 15:32:58,282 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2045mS.
+2024-03-17 15:32:58,287 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 2mS.
+2024-03-17 15:32:58,288 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 15:55:24,200 [INFO] MainUpdater:2873 - connection check result : 10
+2024-03-17 15:55:24,202 [INFO] MainUpdater:2873 - connection check result : 10
+2024-03-17 15:55:24,610 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-03-17 15:55:24,610 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.100
+2024-03-17 15:55:24,675 [ERROR] ProjectManagerView:394 - 
+java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()" because the return value of "java.util.List.get(int)" is null
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab$10.caretUpdate(ProjectChoiceTab.java:2493) ~[filemanager.jar:?]
+	at javax.swing.text.JTextComponent.fireCaretUpdate(JTextComponent.java:412) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.fire(JTextComponent.java:4491) ~[?:?]
+	at javax.swing.text.JTextComponent$MutableCaretEvent.stateChanged(JTextComponent.java:4513) ~[?:?]
+	at javax.swing.text.DefaultCaret.fireStateChanged(DefaultCaret.java:842) ~[?:?]
+	at javax.swing.text.DefaultCaret.changeCaretPosition(DefaultCaret.java:1313) ~[?:?]
+	at javax.swing.text.DefaultCaret.handleSetDot(DefaultCaret.java:1212) ~[?:?]
+	at javax.swing.text.DefaultCaret.setDot(DefaultCaret.java:1193) ~[?:?]
+	at javax.swing.text.DefaultCaret$Handler.insertUpdate(DefaultCaret.java:1789) ~[?:?]
+	at javax.swing.text.AbstractDocument.fireInsertUpdate(AbstractDocument.java:226) ~[?:?]
+	at javax.swing.text.AbstractDocument.handleInsertString(AbstractDocument.java:780) ~[?:?]
+	at javax.swing.text.AbstractDocument.insertString(AbstractDocument.java:739) ~[?:?]
+	at javax.swing.text.PlainDocument.insertString(PlainDocument.java:131) ~[?:?]
+	at javax.swing.text.AbstractDocument.replace(AbstractDocument.java:698) ~[?:?]
+	at javax.swing.text.JTextComponent.setText(JTextComponent.java:1729) ~[?:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.createHeapStackFields(ProjectChoiceTab.java:933) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.buildLinkSettingsPanel(ProjectChoiceTab.java:3426) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.defineWindowsFields(ProjectChoiceTab.java:1813) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectChoiceTab.updateSettings(ProjectChoiceTab.java:533) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.gui.ProjectSettingsPanel.UpdateDialog(ProjectSettingsPanel.java:244) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.projectmanager.ProjectManagerView.propertyChange(ProjectManagerView.java:391) ~[filemanager.jar:?]
+	at java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:335) ~[?:?]
+	at java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268) ~[?:?]
+	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:54) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.mxsystem.MxSystem.closeConfig(MxSystem.java:900) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.maingui.MainPanel.closeConfig(MainPanel.java:776) ~[STM32CubeMX.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.OpenFileManager.loadConfigurationFile(OpenFileManager.java:245) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.engine.MainFileManager.userLoadConfig(MainFileManager.java:290) ~[filemanager.jar:?]
+	at com.st.microxplorer.plugins.filemanager.FileManagerView.getSpecificTask(FileManagerView.java:247) ~[filemanager.jar:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor.getMxTabbedPaneInstance(CubeMxEditor.java:1184) ~[com.st.stm32cube.common.mx_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.editor.CubeMxEditor$12$1.createSwingComponent(CubeMxEditor.java:1065) ~[com.st.stm32cube.common.mx_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite.doComponentCreation(EmbeddedSwingComposite.java:492) ~[com.st.stm32cube.common.mx.oss_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.EmbeddedSwingComposite$4.run(EmbeddedSwingComposite.java:291) ~[com.st.stm32cube.common.mx.oss_6.10.0.202311202037/:?]
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment$2.run(AwtEnvironment.java:166) ~[com.st.stm32cube.common.mx.oss_6.10.0.202311202037/:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:742) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+2024-03-17 15:55:24,677 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2024-03-17 15:55:24,681 [INFO] ThirdParty:873 - entering critical section [close project]
+2024-03-17 15:55:24,682 [INFO] ThirdParty:883 - exiting critical section [close project]
+2024-03-17 15:55:24,686 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2024-03-17 15:55:24,692 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 746195896 Bytes (1073741824)
+2024-03-17 15:55:24,692 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-03-17 15:55:24,692 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.100
+2024-03-17 15:55:24,692 [INFO] OpenFileManager:312 - Change cursor
+2024-03-17 15:55:24,713 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2024-03-17 15:55:24,723 [INFO] Mcu:2016 - Initializing MCU STM32L4R5ZITxP STM32L4R5ZITxP STM32L4R5ZIT6P
+2024-03-17 15:55:26,458 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2024-03-17 15:55:27,030 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2024-03-17 15:55:27,031 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2024-03-17 15:55:27,031 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2024-03-17 15:55:27,031 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2024-03-17 15:55:27,031 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,034 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,035 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,035 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,035 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,035 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,035 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,035 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,035 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2024-03-17 15:55:27,095 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-03-17 15:55:27,232 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-03-17 15:55:27,466 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 912727520 Bytes (1073741824)
+2024-03-17 15:55:27,557 [INFO] MicroXplorer:468 - Change Database Path : 
+2024-03-17 15:55:27,558 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.100
+2024-03-17 15:55:27,559 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2024-03-17 15:55:27,559 [INFO] ThirdParty:835 - entering critical section [change project]
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.6.6
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.23.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.8.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.5.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.3.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 10.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.1
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.2.0
+2024-03-17 15:55:27,559 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2024-03-17 15:55:27,560 [INFO] ThirdParty:841 - exiting critical section [change project]
+2024-03-17 15:55:28,101 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2024-03-17 15:55:28,105 [INFO] PinOutPanel:1499 - setPackage(STM32L4R5ZITxP,LQFP144)
+2024-03-17 15:55:28,422 [INFO] UtilMem:75 - Before build in PCC Used Memory: 743336888 Bytes (1073741824)
+2024-03-17 15:55:28,850 [INFO] UtilMem:75 - After build in PCC Used Memory: 850817976 Bytes (1073741824)
+2024-03-17 15:55:28,914 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,916 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,916 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,917 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,921 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,921 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,921 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,921 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,921 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,921 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,922 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,923 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,924 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,924 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,926 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,927 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,928 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,928 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:28,928 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-03-17 15:55:29,022 [INFO] CADModel:165 - CPN selected for project levelSTM32L4R5ZIT6P
+2024-03-17 15:55:29,022 [INFO] CADModel:114 - Register for checkConnection events
+2024-03-17 15:55:29,068 [INFO] OpenFileManager:343 - Restore cursor
+2024-03-17 15:55:37,270 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 16:10:05,434 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:10:30,195 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:10:30,500 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:10:38,214 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:10:38,504 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:11:32,068 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:11:32,235 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:11:32,441 [INFO] Gpio:277 - dependency for GPIO [LPUART1, SPI1, USART2]
+2024-03-17 16:11:38,488 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 782495352 Bytes (1073741824)
+2024-03-17 16:11:39,421 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 851605080 Bytes (1073741824)
+2024-03-17 16:11:39,626 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 16:11:39,626 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 16:11:39,626 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 16:11:39,626 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 16:11:39,626 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 16:11:39,626 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 16:11:39,627 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 16:11:39,628 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 16:11:39,761 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 16:11:39,846 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 16:11:40,014 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 16:11:40,080 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 16:11:40,833 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 16:11:40,977 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 16:11:40,978 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 16:11:41,027 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 16:11:41,039 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 16:11:41,122 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 16:11:41,124 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 16:11:41,166 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 16:11:41,169 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 16:11:41,219 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 16:11:41,243 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 16:11:41,298 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 16:11:41,300 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 16:11:41,377 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 16:11:41,820 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 120mS.
+2024-03-17 16:11:41,831 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 16:11:42,094 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 16:11:42,102 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-03-17 16:11:42,107 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-03-17 16:11:42,121 [INFO] ApiDbMcu:508 - Load IP Config File for TOUCHSENSING
+2024-03-17 16:11:42,126 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2024-03-17 16:11:42,128 [INFO] ApiDbMcu:508 - Load IP Config File for USB_HOST
+2024-03-17 16:11:44,033 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2199mS.
+2024-03-17 16:11:44,038 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 16:11:44,041 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 16:25:06,034 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,554x144,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 16:42:22,114 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 16:43:25,548 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 16:43:43,651 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 16:43:53,785 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 751956376 Bytes (1073741824)
+2024-03-17 16:43:54,725 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 828502424 Bytes (1073741824)
+2024-03-17 16:43:54,971 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 16:43:54,972 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 16:43:54,972 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 16:43:54,972 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 16:43:54,972 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 16:43:54,972 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 16:43:54,973 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 16:43:54,975 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 16:43:55,103 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 16:43:55,385 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 16:43:55,572 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 16:43:55,691 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 16:43:56,152 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 16:43:56,359 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 16:43:56,370 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 16:43:56,418 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 16:43:56,425 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 16:43:56,504 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 16:43:56,506 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 16:43:56,548 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 16:43:56,553 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 16:43:56,607 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 16:43:56,639 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 16:43:56,700 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 16:43:56,701 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 16:43:56,775 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 16:43:57,249 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 117mS.
+2024-03-17 16:43:57,260 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 16:43:57,565 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 16:43:59,459 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2197mS.
+2024-03-17 16:43:59,462 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 16:43:59,464 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 16:53:36,401 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 16:53:45,893 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 783009784 Bytes (1073741824)
+2024-03-17 16:53:46,248 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 812892152 Bytes (1073741824)
+2024-03-17 16:53:46,544 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 16:53:46,544 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 16:53:46,544 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 16:53:46,544 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 16:53:46,544 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 16:53:46,544 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 16:53:46,544 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 16:53:46,546 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 16:53:46,684 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 16:53:46,784 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 16:53:47,098 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 16:53:47,255 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 16:53:47,758 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 16:53:47,977 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 16:53:47,990 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 16:53:48,052 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 16:53:48,058 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 16:53:48,146 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 16:53:48,148 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 16:53:48,192 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 16:53:48,195 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 16:53:48,244 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 16:53:48,264 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 16:53:48,328 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 16:53:48,329 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 16:53:48,409 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 16:53:48,852 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 115mS.
+2024-03-17 16:53:48,863 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 16:53:49,199 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 16:53:52,030 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 3164mS.
+2024-03-17 16:53:52,035 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 16:53:52,037 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 17:02:43,132 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 17:02:50,815 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 714916512 Bytes (1073741824)
+2024-03-17 17:02:55,108 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 743943864 Bytes (1073741824)
+2024-03-17 17:02:55,803 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 740627904 Bytes (1073741824)
+2024-03-17 17:02:56,031 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 17:02:56,031 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 17:02:56,031 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 17:02:56,031 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 17:02:56,031 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 17:02:56,031 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 17:02:56,032 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 17:02:56,033 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 17:02:56,194 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 17:02:56,296 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 17:02:56,714 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 17:02:56,854 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 17:02:57,313 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 17:02:57,517 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 17:02:57,530 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 17:02:57,577 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 17:02:57,585 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 17:02:57,660 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 17:02:57,662 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 17:02:57,706 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 17:02:57,710 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 17:02:57,760 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 17:02:57,780 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 17:02:57,838 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 17:02:57,840 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 17:02:57,922 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 17:02:58,337 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 64mS.
+2024-03-17 17:02:58,340 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 17:02:58,632 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 17:03:00,093 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1750mS.
+2024-03-17 17:03:00,218 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 64mS.
+2024-03-17 17:03:00,283 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 3mS.
+2024-03-17 17:07:45,368 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 17:07:48,388 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 17:07:48,492 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 17:07:57,330 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 747119192 Bytes (1073741824)
+2024-03-17 17:07:57,483 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 769661528 Bytes (1073741824)
+2024-03-17 17:07:58,161 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 818944600 Bytes (1073741824)
+2024-03-17 17:07:58,449 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 17:07:58,449 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 17:07:58,450 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 17:07:58,450 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 17:07:58,450 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 17:07:58,450 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 17:07:58,450 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 17:07:58,451 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 17:07:58,581 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 17:07:58,919 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 17:07:59,092 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 17:07:59,176 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 17:07:59,700 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 17:07:59,868 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 17:07:59,871 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 17:07:59,914 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 17:07:59,919 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 17:07:59,992 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 17:07:59,994 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 17:08:00,040 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 17:08:00,044 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 17:08:00,092 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 17:08:00,106 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 17:08:00,160 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 17:08:00,162 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 17:08:00,247 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 17:08:00,689 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 112mS.
+2024-03-17 17:08:00,701 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 17:08:01,014 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 17:08:02,808 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2104mS.
+2024-03-17 17:08:02,812 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 17:08:02,813 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 17:39:10,297 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 17:39:14,909 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 760509056 Bytes (1073741824)
+2024-03-17 17:39:15,066 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 736404000 Bytes (1073741824)
+2024-03-17 17:39:15,558 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 787784224 Bytes (1073741824)
+2024-03-17 17:39:15,756 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 17:39:15,757 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 17:39:15,757 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 17:39:15,757 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 17:39:15,757 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 17:39:15,757 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 17:39:15,757 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 17:39:15,758 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 17:39:15,877 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 17:39:16,143 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 17:39:16,306 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 17:39:16,385 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 17:39:16,844 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 17:39:17,047 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 17:39:17,064 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 17:39:17,127 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 17:39:17,135 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 17:39:17,222 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 17:39:17,224 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 17:39:17,267 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 17:39:17,271 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 17:39:17,319 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 17:39:17,337 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 17:39:17,400 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 17:39:17,402 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 17:39:17,478 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 17:39:17,919 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 112mS.
+2024-03-17 17:39:17,937 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 17:39:18,268 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 17:39:20,012 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2069mS.
+2024-03-17 17:39:20,018 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 2mS.
+2024-03-17 17:39:20,021 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 18:03:12,269 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 18:03:19,477 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 870114088 Bytes (1073741824)
+2024-03-17 18:03:19,632 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 899966768 Bytes (1073741824)
+2024-03-17 18:03:20,369 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 962865504 Bytes (1073741824)
+2024-03-17 18:03:20,610 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 18:03:20,611 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 18:03:20,611 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 18:03:20,611 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 18:03:20,611 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 18:03:20,611 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 18:03:20,611 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 18:03:20,612 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 18:03:20,756 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 18:03:21,042 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 18:03:21,203 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 18:03:21,280 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 18:03:21,738 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 18:03:21,905 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 18:03:21,923 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 18:03:21,995 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 18:03:22,002 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 18:03:22,087 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 18:03:22,088 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 18:03:22,138 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 18:03:22,142 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 18:03:22,192 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 18:03:22,219 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 18:03:22,277 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 18:03:22,278 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 18:03:22,357 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 18:03:22,800 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 109mS.
+2024-03-17 18:03:22,811 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 18:03:23,096 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 18:03:24,785 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1969mS.
+2024-03-17 18:03:24,795 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 2mS.
+2024-03-17 18:03:24,797 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 18:06:52,853 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 18:06:54,462 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 946508520 Bytes (1073741824)
+2024-03-17 18:06:54,588 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 695231856 Bytes (1073741824)
+2024-03-17 18:06:55,776 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 818441584 Bytes (1073741824)
+2024-03-17 18:06:55,990 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 18:06:55,990 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 18:06:55,990 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 18:06:55,990 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 18:06:55,990 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 18:06:55,990 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 18:06:55,991 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 18:06:55,992 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 18:06:56,180 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 18:06:56,271 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 18:06:56,367 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 18:06:56,428 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 18:06:57,022 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 18:06:57,124 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 18:06:57,126 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 18:06:57,169 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 18:06:57,174 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 18:06:57,241 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 18:06:57,242 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 18:06:57,287 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 18:06:57,291 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 18:06:57,345 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 18:06:57,357 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 18:06:57,402 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 18:06:57,403 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 18:06:57,476 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 18:06:57,913 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 112mS.
+2024-03-17 18:06:57,932 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 18:06:58,257 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 18:06:59,932 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1997mS.
+2024-03-17 18:06:59,938 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 18:06:59,940 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 18:07:25,262 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 18:07:49,351 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 754024808 Bytes (1073741824)
+2024-03-17 18:07:49,695 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 783907176 Bytes (1073741824)
+2024-03-17 18:07:49,888 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 18:07:49,889 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 18:07:49,889 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 18:07:49,889 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 18:07:49,889 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 18:07:49,889 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 18:07:49,890 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 18:07:49,890 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 18:07:50,053 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 18:07:50,125 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 18:07:50,248 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 18:07:50,308 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 18:07:50,913 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 18:07:51,058 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 18:07:51,060 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 18:07:51,105 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 18:07:51,108 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 18:07:51,179 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 18:07:51,180 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 18:07:51,232 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 18:07:51,236 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 18:07:51,286 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 18:07:51,300 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 18:07:51,350 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 18:07:51,352 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 18:07:51,444 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 18:07:52,103 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 58mS.
+2024-03-17 18:07:52,112 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 18:07:52,446 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 18:07:54,181 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2067mS.
+2024-03-17 18:07:54,185 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 18:07:54,187 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-03-17 18:46:42,641 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 18:46:42,775 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-03-17 18:46:46,408 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 700812472 Bytes (1073741824)
+2024-03-17 18:46:46,529 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 730172600 Bytes (1073741824)
+2024-03-17 18:46:47,275 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 803572920 Bytes (1073741824)
+2024-03-17 18:46:47,473 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-03-17 18:46:47,473 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-03-17 18:46:47,473 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-03-17 18:46:47,473 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPUART
+2024-03-17 18:46:47,473 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-03-17 18:46:47,473 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-03-17 18:46:47,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-03-17 18:46:47,475 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-03-17 18:46:47,602 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/license.tmp_save
+2024-03-17 18:46:47,691 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/license.tmp
+2024-03-17 18:46:48,005 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp_save
+2024-03-17 18:46:48,107 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/gpio.tmp
+2024-03-17 18:46:48,540 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c_save
+2024-03-17 18:46:48,659 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_it.c
+2024-03-17 18:46:48,660 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h_save
+2024-03-17 18:46:48,707 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_it.h
+2024-03-17 18:46:48,711 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c_save
+2024-03-17 18:46:48,886 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/stm32l4xx_hal_msp.c
+2024-03-17 18:46:48,902 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/MXTmpFiles/system.tmp_save
+2024-03-17 18:46:48,947 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/MXTmpFiles/system.tmp
+2024-03-17 18:46:48,952 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-03-17 18:46:49,000 [INFO] CodeEngine:335 - Generated code: /Users/finn/Spider/XBee/Core/Inc/stm32l4xx_hal_conf.h
+2024-03-17 18:46:49,022 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Inc/main.h_save
+2024-03-17 18:46:49,077 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Inc/main.h
+2024-03-17 18:46:49,079 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/finn/Spider/XBee/Core/Src/main.c_save
+2024-03-17 18:46:49,155 [INFO] CodeEngine:279 - Generated code: /Users/finn/Spider/XBee/Core/Src/main.c
+2024-03-17 18:46:49,585 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 76mS.
+2024-03-17 18:46:49,588 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-03-17 18:46:49,901 [INFO] ConfigFileManager:1495 - The Die is : DIE470
+2024-03-17 18:46:51,748 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2156mS.
+2024-03-17 18:46:51,752 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-03-17 18:46:51,753 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
