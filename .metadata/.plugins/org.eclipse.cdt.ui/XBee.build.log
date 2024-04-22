@@ -1,0 +1,17 @@
+22:08:41 **** Incremental Build of configuration Debug for project XBee ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4R5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "XBee.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Dimas\OneDrive\Desktop\373 Project\XBee\STM32L4R5ZITXP_FLASH.ld" --specs=nosys.specs -Wl,-Map="XBee.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: XBee.elf
+ 
+arm-none-eabi-size  XBee.elf 
+arm-none-eabi-objdump -h -S XBee.elf  > "XBee.list"
+   text	   data	    bss	    dec	    hex	filename
+  38788	    476	   2404	  41668	   a2c4	XBee.elf
+Finished building: default.size.stdout
+ 
+Finished building: XBee.list
+ 
+
+22:08:43 Build Finished. 0 errors, 0 warnings. (took 1s.543ms)
+

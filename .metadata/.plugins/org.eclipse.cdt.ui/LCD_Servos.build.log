@@ -1,0 +1,21 @@
+15:32:52 **** Incremental Build of configuration Debug for project LCD_Servos ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4R5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'lcd_init':
+../Core/Src/main.c:107:17: warning: unused variable 'lcd_write_addr' [-Wunused-variable]
+  107 |         uint8_t lcd_write_addr = lcd_addr << 1;
+      |                 ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "LCD_Servos.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Dimas\OneDrive\Desktop\373 Project\LCD_Servos\STM32L4R5ZITXP_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_Servos.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_Servos.elf
+ 
+arm-none-eabi-size  LCD_Servos.elf 
+arm-none-eabi-objdump -h -S LCD_Servos.elf  > "LCD_Servos.list"
+   text	   data	    bss	    dec	    hex	filename
+  13364	     20	   1652	  15036	   3abc	LCD_Servos.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_Servos.list
+ 
+
+15:32:54 Build Finished. 0 errors, 1 warnings. (took 1s.454ms)
+

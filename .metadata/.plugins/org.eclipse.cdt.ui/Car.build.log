@@ -1,0 +1,84 @@
+16:41:58 **** Incremental Build of configuration Debug for project Car ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L4R5xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:324:49: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  324 |           printf("dist %f, L %f, R %f, leftccr %d, rightccr%d\n", dist, L, R, *TIM2CCR1, *TIM3CCR2);
+      |                                                ~^                             ~~~~~~~~~
+      |                                                 |                             |
+      |                                                 int                           uint32_t {aka long unsigned int}
+      |                                                %ld
+../Core/Src/main.c:324:61: warning: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  324 |           printf("dist %f, L %f, R %f, leftccr %d, rightccr%d\n", dist, L, R, *TIM2CCR1, *TIM3CCR2);
+      |                                                            ~^                            ~~~~~~~~~
+      |                                                             |                            |
+      |                                                             int                          uint32_t {aka long unsigned int}
+      |                                                            %ld
+../Core/Src/main.c:299:18: warning: unused variable 'scaled_dist' [-Wunused-variable]
+  299 |           double scaled_dist; // TODO
+      |                  ^~~~~~~~~~~
+../Core/Src/main.c:240:114: warning: variable 'LeftPress' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                                                                                  ^~~~~~~~~
+../Core/Src/main.c:240:102: warning: variable 'RightPress' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                                                                      ^~~~~~~~~~
+../Core/Src/main.c:240:94: warning: variable 'Select' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                                                              ^~~~~~
+../Core/Src/main.c:240:87: warning: variable 'Start' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                                                       ^~~~~
+../Core/Src/main.c:240:79: warning: variable 'Square' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                                               ^~~~~~
+../Core/Src/main.c:240:76: warning: variable 'X' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                                            ^
+../Core/Src/main.c:240:68: warning: variable 'Circle' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                                    ^~~~~~
+../Core/Src/main.c:240:58: warning: variable 'Triangle' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                          ^~~~~~~~
+../Core/Src/main.c:240:52: warning: variable 'Down' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                                    ^~~~
+../Core/Src/main.c:240:45: warning: variable 'Right' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                             ^~~~~
+../Core/Src/main.c:240:41: warning: variable 'Up' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                         ^~
+../Core/Src/main.c:240:35: warning: variable 'Left' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                                   ^~~~
+../Core/Src/main.c:240:31: warning: variable 'R2' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                               ^~
+../Core/Src/main.c:240:27: warning: variable 'R1' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                           ^~
+../Core/Src/main.c:240:23: warning: variable 'L2' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                       ^~
+../Core/Src/main.c:240:19: warning: variable 'L1' set but not used [-Wunused-but-set-variable]
+  240 |           uint8_t L1, L2, R1, R2, Left, Up, Right, Down, Triangle, Circle, X, Square, Start, Select, RightPress, LeftPress;
+      |                   ^~
+../Core/Src/main.c:207:29: warning: unused variable 'ControllerStatus' [-Wunused-variable]
+  207 |           HAL_StatusTypeDef ControllerStatus = HAL_UART_Receive(&huart2, rx_data, 6, 10);
+      |                             ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Car.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Dimas\OneDrive\Desktop\373 Project\Car\STM32L4R5ZITXP_FLASH.ld" --specs=nosys.specs -Wl,-Map="Car.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Car.elf
+ 
+arm-none-eabi-size  Car.elf 
+arm-none-eabi-objdump -h -S Car.elf  > "Car.list"
+   text	   data	    bss	    dec	    hex	filename
+  39760	    520	   2504	  42784	   a720	Car.elf
+Finished building: default.size.stdout
+ 
+Finished building: Car.list
+ 
+
+16:42:00 Build Finished. 0 errors, 20 warnings. (took 1s.971ms)
+
