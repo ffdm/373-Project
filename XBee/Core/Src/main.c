@@ -40,15 +40,25 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+I2C_HandleTypeDef hi2c1;
+
 UART_HandleTypeDef hlpuart1;
 UART_HandleTypeDef huart2;
+UART_HandleTypeDef huart3;
 
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi3;
 
+TIM_HandleTypeDef htim2;
+
 /* USER CODE BEGIN PV */
-uint8_t rx_data[2];	// Receive data to STM
-uint8_t tx_data[6] = {1,2,3,4,5,6}; // Example data to send from STM
+uint8_t rx_data1[2];	// Receive data upon interrupt from Xbee 1
+uint8_t rx_data2[2]; 	// Receive data upon interrupt from Xbee 2
+uint32_t car_time1;
+uint32_t car_time2;
+int car_finished1 = 0; // bool: has car finished race?
+int car_finished2 = 0; // bool: has car finished race?
+int race_started = 0;
 
 /* USER CODE END PV */
 
@@ -59,6 +69,9 @@ static void MX_USART2_UART_Init(void);
 static void MX_LPUART1_UART_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI3_Init(void);
+static void MX_USART3_UART_Init(void);
+static void MX_TIM2_Init(void);
+static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -66,6 +79,109 @@ static void MX_SPI3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+void lcd_command(uint8_t lcd_addr, uint8_t cmd) {
+	uint8_t lcd_write_addr = lcd_addr << 1;
+
+	uint8_t cmd_buffer[5];
+	uint8_t upper_nibble = cmd & 0xf0; // keep upper 4 bits of cmd and set lower 4 bits to 0
+	uint8_t lower_nibble = cmd << 4; // shift lower 4 bits of cmd into upper 4 bits and set lower 4 bits to 0
+
+	cmd_buffer[0] = upper_nibble | (0b1100);
+	cmd_buffer[1] = upper_nibble | (0b1000);
+	cmd_buffer[2] = lower_nibble | (0b1100);
+	cmd_buffer[3] = lower_nibble | (0b1000);
+
+	HAL_I2C_Master_Transmit(&hi2c1, lcd_write_addr, cmd_buffer, 4, 10);
+	HAL_Delay(5);
+}
+
+void lcd_data(uint8_t lcd_addr, uint8_t cmd) {
+	uint8_t lcd_write_addr = lcd_addr << 1;
+
+	uint8_t data_buffer[5];
+	uint8_t upper_nibble = cmd & 0xf0; // keep upper 4 bits of cmd and set lower 4 bits to 0
+	uint8_t lower_nibble = cmd << 4; // shift lower 4 bits of cmd into upper 4 bits and set lower 4 bits to 0
+
+	data_buffer[0] = upper_nibble | (0b1101);
+	data_buffer[1] = upper_nibble | (0b1001);
+	data_buffer[2] = lower_nibble | (0b1101);
+	data_buffer[3] = lower_nibble | (0b1001);
+
+	HAL_I2C_Master_Transmit(&hi2c1, lcd_write_addr, data_buffer, 4, 10);
+	HAL_Delay(5);
+}
+
+void lcd_clear() {
+	lcd_command(0x27, 0x01); // 0x01 -> Clear display (and clear DDRAM)
+}
+
+// Writes a C-string to the lcd at the given row and col
+void lcd_string(uint8_t lcd_addr, uint8_t row, uint8_t col, const char* message) {
+
+	uint8_t start_pos = 0x80 + (row * 0x40) + col;
+
+	lcd_command(lcd_addr, start_pos); // bring cursor to start
+
+	while(*message != '\0') {
+		lcd_data(lcd_addr, message[0]);
+		message ++ ;
+	}
+}
+
+void lcd_init(uint8_t lcd_addr) {
+	uint8_t lcd_write_addr = lcd_addr << 1;
+
+	// 1. Set to 4 bit operation (only this instruction executes as 8 bit)
+	HAL_Delay(100); // must wait at least 40 ms after booting
+	lcd_command(lcd_addr, 0x30);
+	HAL_Delay(10);
+	lcd_command(lcd_addr, 0x28); // 0x28 -> function set 4 bits, 2 lines // 0010,1000
+	HAL_Delay(10);
+	lcd_command(lcd_addr, 0x08); // 0x08 -> Clear display (without clearing DDRAM)
+	HAL_Delay(10);
+	lcd_command(lcd_addr, 0x01); // 0x01 -> Clear display (and clear DDRAM)
+	HAL_Delay(10);
+	lcd_command(lcd_addr, 0x06); // 0x06 -> entry mode
+	HAL_Delay(10);
+	lcd_command(lcd_addr, 0x0C); // 0x0C -> display on cursor off
+	HAL_Delay(10);
+
+	lcd_command(0x27, 0x80);
+	HAL_Delay(10);
+}
+
+void start_race() {
+	printf("Starting race\n");
+	lcd_clear();
+	lcd_string(0x27, 0, 0, "Starting Race!");
+	car_finished1 = 0; car_finished2 = 0;
+	car_time1 = 0; car_time2 = 0;
+
+	HAL_Delay(1000);
+	lcd_clear();
+	lcd_string(0x27, 0, 0, "3");
+	HAL_Delay(1000);
+
+	lcd_clear();
+	lcd_string(0x27, 0, 0, "2");
+	HAL_Delay(1000);
+
+	lcd_clear();
+	lcd_string(0x27, 0, 0, "1");
+	HAL_Delay(1000);
+
+	lcd_clear();
+	lcd_string(0x27, 0, 0, "Go!");
+	HAL_Delay(1000);
+
+	HAL_UART_Receive_IT(&huart2, rx_data1, 1);
+	HAL_UART_Receive_IT(&huart3, rx_data2, 1);
+
+
+
+	htim2.Instance->CNT = 0;
+	race_started = 1;
+}
 /* USER CODE END 0 */
 
 /**
@@ -75,6 +191,8 @@ static void MX_SPI3_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, 0);
+  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_1, 0);
 
   /* USER CODE END 1 */
 
@@ -100,60 +218,114 @@ int main(void)
   MX_LPUART1_UART_Init();
   MX_SPI1_Init();
   MX_SPI3_Init();
+  MX_USART3_UART_Init();
+  MX_TIM2_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start(&htim2);
 
   // Use interrupts to receive data
-  HAL_UART_Receive_IT(&huart2, rx_data, 2);
+//  HAL_UART_Receive_IT(&huart2, rx_data1, 1);
+//  HAL_UART_Receive_IT(&huart3, rx_data2, 1);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
+  HAL_Delay(100);
+  lcd_init(0x27);
+  HAL_Delay(100);
+
   uint8_t not_analog[6] = {0, 0, 128, 128, 128, 128};
   uint8_t spi_trs[21] = {0x01, 0x42};
   uint8_t spi_rec1[21];
   uint8_t spi_rec2[21];
 
+  lcd_string(0x27, 0, 0, "LCD Init");
+
+  //
+//  lcd_clear();
+//  lcd_string(0x27, 0, 0, "Car 1 Wins");
+//  		   lcd_string(0x27, 1, 0, "time: ");
+//  		   char num_buffer[10];
+//  		   itoa(73, num_buffer, 10);
+//  		   lcd_string(0x27, 1, 6, num_buffer);
+//  		   lcd_string(0x27, 1, 13, "sec");
+  //
+
+  race_started = 0;
+
   while (1)
   {
-	# define DEBUG_MODE 1;
+	 # define DEBUG_MODE 1;
 
 	// Read Controller 1 (SPI 1)
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);
-	HAL_SPI_TransmitReceive(&hspi1, spi_trs, spi_rec1, 9, 10);
+	HAL_SPI_TransmitReceive(&hspi1, spi_trs, spi_rec1, 9, HAL_MAX_DELAY);
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
-	HAL_Delay(10);
+	HAL_Delay(1);
 
 	// Read Controller 2 (SPI 3)
 	HAL_GPIO_WritePin(GPIOF, GPIO_PIN_13, GPIO_PIN_RESET); // ATT
-	HAL_SPI_TransmitReceive(&hspi3, spi_trs, spi_rec2, 9, 10);
+	HAL_SPI_TransmitReceive(&hspi3, spi_trs, spi_rec2, 9, HAL_MAX_DELAY);
 	HAL_GPIO_WritePin(GPIOF, GPIO_PIN_13, GPIO_PIN_SET); // ATT
-	HAL_Delay(10);
+	HAL_Delay(1);
 
 	// Only transmit if in Analog mode
 	// Header may be unique to controller
 
 	#ifdef DEBUG_MODE
-		printf("Controller 1: ");
-		for (int i = 0; i < 9; ++i) {
-			printf("%2x ", spi_rec1[i]);
-		}
-		printf("\n");
-		printf("Controller 2: ");
-		for (int i = 0; i < 9; ++i) {
-			printf("%2x ", spi_rec2[i]);
-		}
-		printf("\n");
+//		printf("Controller 1: ");
+//		for (int i = 0; i < 9; ++i) {
+//			printf("%2x ", spi_rec1[i]);
+//		}
+//		printf("\n");
+//		printf("Controller 2: ");
+//		for (int i = 0; i < 9; ++i) {
+//			printf("%2x ", spi_rec2[i]);
+//		}
+//		printf("\n");
 	#endif
 
-	if(spi_rec1[1] == 0x73) {
-		HAL_UART_Transmit(&huart2, spi_rec1 + 3, 6, 10);
+	// Transmit to Car 1
+	if(spi_rec1[1] == 0x73 && !car_finished1) {
+		HAL_UART_Transmit(&huart2, spi_rec1 + 3, 6, HAL_MAX_DELAY);
 	} else {
-		HAL_UART_Transmit(&huart2, not_analog, 6, 10);
-	}
-	HAL_Delay(10);
+		HAL_UART_Transmit(&huart2, not_analog, 6, HAL_MAX_DELAY);
+	} HAL_Delay(5);
 
+	// Transmit to Car 2
+	if(spi_rec2[1] == 0x73 && !car_finished2) {
+		printf("Controller 2: ");
+			for (int i = 0; i < 9; ++i) {
+				printf("%2x ", spi_rec2[i]);
+			}
+			printf("\n");
+		HAL_UART_Transmit(&huart3, spi_rec2 + 3, 6, HAL_MAX_DELAY);
+	} else {
+
+		printf("Controller 2: ");
+		printf("69 69 69 ");
+		for (int i = 0; i < 6; ++i) {
+			printf("%2x ", not_analog[i]);
+		}
+		printf("\n");
+
+		HAL_UART_Transmit(&huart3, not_analog, 6, HAL_MAX_DELAY);
+	} HAL_Delay(5);
+
+	// Start condition for race
+	// start button pressed on both controllers and both controllers are in analog mode
+	//
+//	uint8_t analog1 = (spi_rec1[1] == 0x73);
+//	uint8_t analog2 = (spi_rec2[1] == 0x73);
+	uint8_t start1 = !((spi_rec1[3] & (1 << 5)) >> 5);
+	uint8_t start2 = !((spi_rec2[3] & (1 << 5)) >> 5);
+	printf("start1, 2: %d %d \n", start1, start2);
+	if (start1 && start2 && !race_started) {
+		start_race();
+	}
 
     /* USER CODE END WHILE */
 
@@ -205,6 +377,54 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.Timing = 0x00000E14;
+  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+
+  /* USER CODE END I2C1_Init 2 */
+
 }
 
 /**
@@ -304,6 +524,54 @@ static void MX_USART2_UART_Init(void)
 }
 
 /**
+  * @brief USART3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART3_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART3_Init 0 */
+
+  /* USER CODE END USART3_Init 0 */
+
+  /* USER CODE BEGIN USART3_Init 1 */
+
+  /* USER CODE END USART3_Init 1 */
+  huart3.Instance = USART3;
+  huart3.Init.BaudRate = 115200;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart3.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart3.Init.ClockPrescaler = UART_PRESCALER_DIV1;
+  huart3.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetTxFifoThreshold(&huart3, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_SetRxFifoThreshold(&huart3, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_UARTEx_DisableFifoMode(&huart3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART3_Init 2 */
+
+  /* USER CODE END USART3_Init 2 */
+
+}
+
+/**
   * @brief SPI1 Initialization Function
   * @param None
   * @retval None
@@ -384,6 +652,64 @@ static void MX_SPI3_Init(void)
 }
 
 /**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_IC_InitTypeDef sConfigIC = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 3999;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 4294967295;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_IC_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+  sConfigIC.ICFilter = 0;
+  if (HAL_TIM_IC_ConfigChannel(&htim2, &sConfigIC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -401,15 +727,21 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   HAL_PWREx_EnableVddIO2();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOF, GPIO_PIN_13, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PE2 PE3 */
   GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
@@ -442,14 +774,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG_ADC_CONTROL;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PA0 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PA1 PA3 */
   GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_3;
@@ -484,6 +808,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : PG0 PG1 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+
   /*Configure GPIO pins : PE7 PE8 PE9 PE10
                            PE11 PE12 PE13 */
   GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10
@@ -502,14 +833,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF3_TIM1_COMP1;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_10;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
   /*Configure GPIO pins : PB12 PB13 PB15 */
   GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -525,14 +848,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.Alternate = GPIO_AF14_TIM15;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PD8 PD9 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF7_USART3;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PD14 PD15 */
   GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_15;
@@ -603,12 +918,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF12_SDMMC1;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB8 PB9 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+  /*Configure GPIO pin : PB7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF4_I2C1;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PE0 */
@@ -640,8 +954,65 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
    /* Prevent unused argument(s) compilation warning */
    UNUSED(huart);
 
-   printf("Received data: %x%x\n", rx_data[0], rx_data[1]);
-   HAL_UART_Receive_IT(&huart2, rx_data, 2);
+   uint32_t curr_time = htim2.Instance->CNT;
+
+//   int car_finished1 = 0; // bool: has car finished race?
+//   int car_finished2 = 0; // bool: has car finished race?
+//   int race_started = 0;
+
+   lcd_clear();
+
+   if(huart == &huart2) { // Received from car 1
+	   printf("Received interrupt from car 1\n");
+	   printf("Car 1 finished in %d milliseconds\n", curr_time);
+
+	   int time = curr_time / 1000;
+
+	   if(!car_finished2) {
+		   lcd_string(0x27, 0, 0, "Car 1 Wins");
+		   lcd_string(0x27, 1, 0, "time: ");
+		   char num_buffer[10];
+		   itoa(time, num_buffer, 10);
+		   lcd_string(0x27, 1, 6, num_buffer);
+		   lcd_string(0x27, 1, 13, "sec");
+	   } else {
+		   lcd_string(0x27, 0, 0, "Car 1 Finished");
+	   }
+
+	   car_time1 = curr_time;
+	   car_finished1 = 1;
+	   HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, 1);
+	   HAL_Delay(10);
+	   HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, 0);
+
+   } else if(huart == &huart3) { // Received from car 2
+	   printf("Received interrupt from car 2\n");
+	   printf("Car 2 finished in %u milliseconds\n", curr_time);
+	   printf("rx_data2[0]: %d, \n", rx_data2[0]);
+
+	   int time = curr_time / 1000;
+
+	   if(!car_finished1) {
+	   		   lcd_string(0x27, 0, 0, "Car 2 Wins");
+			   lcd_string(0x27, 1, 0, "time: ");
+			   char num_buffer[10];
+			   itoa(time, num_buffer, 10);
+			   lcd_string(0x27, 1, 6, num_buffer);
+			   lcd_string(0x27, 1, 13, "sec");
+	   } else {
+		   lcd_string(0x27, 0, 0, "Car 2 Finished");
+	   }
+
+	   car_time2 = curr_time;
+	   car_finished2 = 1;
+	   HAL_GPIO_WritePin(GPIOG, GPIO_PIN_1, 1);
+	   HAL_Delay(10);
+	   HAL_GPIO_WritePin(GPIOG, GPIO_PIN_1, 0);
+   }
+
+   if(car_finished1 && car_finished2) {
+	   race_started = 0;
+   }
  }
 
 

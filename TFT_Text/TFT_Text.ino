@@ -65,5 +65,6 @@ void setup() {
 }
 
 void loop() {
+  Serial.printf("hello\n");
   countdown();
 }

@@ -9,7 +9,7 @@
 // # define DEBUG
 
 // Which camera/receiver pair is this?
-const int id = 1; // 1 or 2
+const int id = 2; // 1 or 2
 
 // WiFi parameters
 const char* ssid = "Banana Phone";

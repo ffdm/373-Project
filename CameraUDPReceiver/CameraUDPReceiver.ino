@@ -3,11 +3,12 @@
 #include <TJpg_Decoder.h>
 #include "SPI.h"
 #include <TFT_eSPI.h>
+#include "Free_Fonts.h"
 
 // # define DEBUG
 
 // Which camera/receiver pair is this?
-const int id = 1; // 1 or 2
+const int id = 2; // 1 or 2
 
 // WiFi parameters
 int status = WL_IDLE_STATUS;
@@ -22,6 +23,13 @@ uint8_t last_frame_num; // previous frame
 uint8_t jpg_buffer[8000]; // store jpeg data received from camera
 uint8_t temp_buffer[2000]; // store the current segment
 uint8_t received_segs[4];
+
+// Race parameters
+unsigned int race_start_time;
+int mode = 0; // 0 means race has not begun, 1 means race has begun
+// void signal_from_stm();
+// void countdown();
+// void display_time();
 
 // LCD parameters
 TFT_eSPI tft = TFT_eSPI();
@@ -85,6 +93,8 @@ void setup() {
   // Initialize serial port
   Serial.begin(115200);
 
+  //pinMode(0, INPUT);
+
   // Initialize LCD
   tft.begin();
   tft.setTextColor(0xFFFF, 0x0000);
@@ -110,6 +120,13 @@ void setup() {
 }
 
 void loop() {
+  // Check to see if signal from STM32
+  // Serial.printf("checking\n");
+  //  if(digitalRead(0) == 1) {
+  //    printf("Mode: %d\n", mode);
+  //    signal_from_stm();
+  // }
+
   size_t buffer_length;
   uint8_t frame_num, segment_num, num_segments;
   
@@ -206,3 +223,56 @@ void printWifiStatus() {
 
   Serial.println(" dBm");
 }
+
+// void signal_from_stm() {
+//   if(mode == 0) {
+//     countdown();
+//   } else if(mode == 1) {
+//     display_time();
+//   } else {
+//     Serial.printf("Some other thingy\n");
+//   }
+// }
+
+// void countdown() {
+//   Serial.printf("Doing countdown\n");
+//   tft.fillScreen(TFT_RED);
+//   tft.setFreeFont(FF48);
+//   tft.setCursor(155, 130);
+//   tft.print("3");
+//   delay(1000);
+
+//   tft.fillScreen(TFT_RED);
+//   tft.setCursor(155, 130);
+//   tft.print("2");
+//   delay(1000);
+
+//   tft.fillScreen(TFT_RED);
+//   tft.setCursor(155, 130);
+//   tft.print("1");
+//   delay(1000);
+
+//   tft.fillScreen(TFT_GREEN);
+//   tft.setCursor(125, 130);
+//   tft.print("GO!");
+//   delay(1000);
+
+//   race_start_time = micros();
+//   mode = 1;
+// }
+
+// void display_time() {
+//   Serial.printf("Displaying time\n");
+//   unsigned int race_duration = micros() - race_start_time;
+//   unsigned int time_in_sec = race_duration / 1000;
+//   unsigned int minutes = time_in_sec / 60;
+//   unsigned int seconds = time_in_sec % 60;
+
+//   tft.fillScreen(TFT_BLUE);
+//   tft.setCursor(0, 80);
+//   tft.setFreeFont(FF48);
+//   tft.printf("     Time: \n     %u minute\n     %u seconds", minutes, seconds);
+
+//   delay(5000);
+//   mode = 0;
+// }
