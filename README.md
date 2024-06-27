@@ -35,6 +35,6 @@ PS2 controller hacked over SPI
 - ESP32-CAM module records, compresses (JPG), and transmits video over UDP
 
 ## Finish Line Detection
-- The blue finish line is detected using the color connected components mode on PixyCam modules on each Car
+- Blue finish line is detected using the color connected components mode on PixyCam modules on each Car
 - Sends data over XBee indicating which car crossed the finish line
 - When this data is received, a UART Interrupt is triggered on the base station stopping the race and displaying winner
